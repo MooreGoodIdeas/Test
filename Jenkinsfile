@@ -3,7 +3,16 @@ pipeline {
   stages {
     stage('Build Dependances') {
       steps {
-        echo 'test'
+        parallel(
+          "Build Dependances": {
+            echo 'test'
+            
+          },
+          "DoMore": {
+            echo 'aaa'
+            
+          }
+        )
       }
     }
     stage('Build LabVIEW') {
