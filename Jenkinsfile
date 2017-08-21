@@ -1,9 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Basic') {
+    stage('Build Dependances') {
       steps {
         echo 'test'
+      }
+    }
+    stage('Build LabVIEW') {
+      steps {
+        echo 'Building LabVIEW1'
+        echo 'Build LabVIEW2'
       }
     }
   }
