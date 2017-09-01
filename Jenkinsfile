@@ -21,5 +21,10 @@ pipeline {
         echo 'Build LabVIEW2'
       }
     }
+    stage('archive') {
+      steps {
+        archiveArtifacts 'Test/Abc'
+      }
+    }
   }
 }
